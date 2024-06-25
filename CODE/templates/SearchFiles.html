@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Grayscale - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <link href="static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Data Owner</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+<!--                        <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('uplodfiles') }}">Upload Files</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('viewfiles') }}">View Files</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Search Files</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="{{ url_for('filestatus') }}">Files Status</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Request Stautus</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center" >
+                    <div class="text-center" align="center">
+                        <div class="centered" style=" padding-bottom: 200px;" align="center">
+                     <br><br><br><br>  <br><br><br><br><br><h2 style="padding-bottom: 99px;color:white">A Secure Data Dynamics and Public Auditing Scheme for Cloud Storage</h2>
+
+				 <form action="{{ url_for('SearchFiles') }}" method="post" >
+                            {% if msg== "not found" %}
+                                <h3 style="color:white">Details not found.</h3><br>
+                            {% endif %}
+                            <table style="color:pink">
+                                <tr><td>Search Files:&nbsp;&nbsp;&nbsp;</td><td><input type="text" name="Keywords" placeholder="Confidential Details"></td></tr>
+                            </table>
+                            <br><input class="btn btn-info" type="submit" value="Submit">
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2021</div></footer>
+
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>

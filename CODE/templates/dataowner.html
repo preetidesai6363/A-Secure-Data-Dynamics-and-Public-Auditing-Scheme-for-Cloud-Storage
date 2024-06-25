@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Grayscale - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <link href="static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Data Owner</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('TPA') }}">TPA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('css') }}">CSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('dataowner') }}">DATA OWNER</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+<div class="centered" style=" padding-bottom: 200px;">
+                     <br><br><br><br>  <br><br><br><br><br>  <br><br><br><br><h2 style="padding-bottom: 99px;color:white">A Secure Data Dynamics and Public Auditing Scheme for Cloud Storage</h2>
+
+					<form action="{{url_for('dataowner')}}" method="post">
+					{% if ms=="success" %}
+					<br><br><br><br><br><br><h2>Regestration Successfully Completed</h2>
+					{% endif %}
+					<br><h2 style="color:blue">Data Owner Registration</h2>
+						<table style="color:white">
+							<tr><td><strong>Enter Name:</strong></td><td><input type="text" name="name" required> </td></tr>
+							<tr><td><strong>Enter Email:</strong></td><td><input type="text" name="email" required> </td></tr>
+                            		<tr><td><strong>Enter Age:</strong></td><td><input type="text" name="age" required> </td></tr>
+							<tr><td><strong>Enter Password:</strong></td><td><input type="password" name="pwd" required> </td></tr>
+                            		<tr><td><strong>Enter Confirm Password:</strong></td><td><input type="password" name="cpwd" required> </td></tr>
+                            <tr><td><strong>Select Gender:</strong></td><td><select name="gender" required>
+                                    <option>Select</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                                </td></tr>
+
+                            		<tr><td><strong>Enter Mobile:</strong></td><td><input type="number" name="mobile" required> </td></tr>
+						</table>
+						<br><br><input type="submit" value="Register"class="btn btn-info">&nbsp;<a href="{{url_for('dataownerlogin')}}" class="btn btn-primary">Click Here to Login Page</a>
+					</form>
+				</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2021</div></footer>
+
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>
